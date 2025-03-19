@@ -11,6 +11,11 @@ app.use('/', authRoutes)
 
 const PORT = process.env.PORT || 4000
 
+app.get('/', function (req,res) {
+    res.send('Hello World');
+})
+
+
 connectDB()
 app.listen(PORT, function() {
     console.log(`Server is running on PORT ${PORT}`);
